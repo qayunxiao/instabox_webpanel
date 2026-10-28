@@ -1,0 +1,5 @@
+token.txt
+fleet.json
+*.log
+__pycache__/
+*.muse-github-snapshot-sync.json

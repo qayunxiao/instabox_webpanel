@@ -1,0 +1,16 @@
+[Unit]
+Description=Instabox Panel (system monitor + web service manager)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/data/workspace/panel
+ExecStart=/usr/bin/python3 /data/workspace/panel/panel.py
+Environment=PANEL_PORT=18090
+# 可选：Environment=MACHINE_ID=m_yourmachineid
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
